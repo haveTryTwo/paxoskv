@@ -35,6 +35,8 @@ message Value {
 // A paxos instance is used to determine a specific version of a record.
 // E.g.: for a key-value record foo₀=0, to set foo=2, a paxos instance is
 // created to choose the value for key "foo", ver "1", i.e., foo₁
+// NOTE: empe, 哪个key的哪个版本，即该key的该版本只能写一次
+// 如果想修改key，则增加版本即可，新的版本保证只会写一次
 message PaxosInstanceId {
     // the key of a record to operate on.
     string Key = 1;

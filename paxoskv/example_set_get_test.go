@@ -2,9 +2,10 @@ package paxoskv
 
 import (
 	"fmt"
+	"testing"
 )
 
-func Example_setAndGetByKeyVer() {
+func TestExample_setAndGetByKeyVer(t *testing.T) {
 
 	// In this example it set or get a key_ver by running a paxos instance.
 
